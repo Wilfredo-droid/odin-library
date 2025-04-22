@@ -28,7 +28,24 @@ let book2 = new bookConstructor("The Lord of the Rings", "J.R.R. Tolkien", 1178,
 let tBody = document.querySelector(".libraryBody");
 let addBookButton = document.querySelector(".addBookButton");
 
+addBookButton.addEventListener("click", (e) => {
 
+
+    
+    let title = prompt("Title ?");
+    let author = prompt("Author ?");
+    let pages = prompt("How many Pages ?");
+
+    const newTr = document.createElement("tr");
+    const newTdTitle = document.createElement("td");
+    const newTdAuthor = document.createElement("td");
+    const newTdPages = document.createElement("td");
+    const newTdRead = document.createElement("td");
+    const newTdDelete = document.createElement("td");
+
+
+
+})
 
 
 //
