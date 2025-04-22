@@ -1,11 +1,11 @@
 let myBookLibrary = [];
 
 
-function bookConstructor(title, author, pages, read) {
+function bookConstructor(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;   
+    this.read = "No";   
     this.id = crypto.randomUUID();
 };
 
@@ -41,7 +41,22 @@ addBookButton.addEventListener("click", (e) => {
     const newTdAuthor = document.createElement("td");
     const newTdPages = document.createElement("td");
     const newTdRead = document.createElement("td");
+    const newTdId = document.createElement("td");
     const newTdDelete = document.createElement("td");
+
+    const newDeleteButton = document.createElement("button");
+
+    newTdTitle.textContent = title;
+    newTdAuthor.textContent = author;
+    newTdPages.textContent = pages;
+    newTdRead.textContent = "Not read";
+
+    tBody.append(newTr);
+    newTr.appendChild(newTdTitle);
+    newTr.appendChild(newTdAuthor);
+    newTr.appendChild(newTdPages);
+    newTr.appendChild(newTdRead);
+
 
 
 
