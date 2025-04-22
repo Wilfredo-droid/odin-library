@@ -98,15 +98,29 @@ newDeleteButton.addEventListener("click", (e) => {
 
     myBookLibrary = newBookLibrary;
 
-//
+});
 
 //Add read status
+let changeReadBookStatus = function(){
+
+  
+
+    if(newBook.read === "No"){
+        newBook.read = "Yes"
+        newTdRead.textContent = newBook.read;
+    }
+    else{
+        newBook.read = "No"
+        newTdRead.textContent = newBook.read;
+    }
 
 
-//
+};
 
 
-})
+newChangeReadButton.addEventListener("click", changeReadBookStatus); 
+
+
 
 
 
