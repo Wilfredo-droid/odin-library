@@ -54,7 +54,7 @@ addBookButton.addEventListener("click", (e) => {
     newTdRead.textContent = newBook.read;
     newTdId.textContent = newBook.id;
 
-    
+    newDeleteButton.textContent = "Delete";
 
 
     tBody.append(newTr);
@@ -64,6 +64,7 @@ addBookButton.addEventListener("click", (e) => {
     newTr.appendChild(newTdRead);
     newTr.appendChild(newTdId);
     newTr.appendChild(newTdDelete);
+    newTdDelete.appendChild(newDeleteButton);
 
 
 
