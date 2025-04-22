@@ -43,8 +43,11 @@ addBookButton.addEventListener("click", (e) => {
     const newTdRead = document.createElement("td");
     const newTdId = document.createElement("td");
     const newTdDelete = document.createElement("td");
+    const newTdChangeRead = document.createElement("td");
 
     const newDeleteButton = document.createElement("button");
+
+    const newTdChangeReadButton =document.createElement("button")
 
     newTdTitle.textContent = newBook.title;
     newTdAuthor.textContent = newBook.author;
@@ -52,7 +55,10 @@ addBookButton.addEventListener("click", (e) => {
     newTdRead.textContent = newBook.read;
     newTdId.textContent = newBook.id;
 
+
     newDeleteButton.textContent = "Delete";
+
+    newTdChangeReadButton.textContent = "Change read status";
 
     newTdTitle.setAttribute("class", "bookTitle");
     newTdAuthor.setAttribute("class", "bookAuthor");
@@ -61,6 +67,8 @@ addBookButton.addEventListener("click", (e) => {
     newTdId.setAttribute("class", "bookId");
     newDeleteButton.setAttribute("class", "deleteBook")
     newDeleteButton.setAttribute("data-id", newBook.id);
+    newTdChangeReadButton.setAttribute("class", "changeRead");
+
 
     tBody.append(newTr);
     newTr.appendChild(newTdTitle);
@@ -88,6 +96,12 @@ newDeleteButton.addEventListener("click", (e) => {
 
     myBookLibrary = newBookLibrary;
 
+//
+
+//Add read status
+
+//
+
 
 })
 
@@ -108,12 +122,5 @@ newDeleteButton.addEventListener("click", (e) => {
 cycleThroughLibrary();
 
 
-//Add read status
- 
-
-
-
-
-// 
 
 
