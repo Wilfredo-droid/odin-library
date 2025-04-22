@@ -22,8 +22,6 @@ let cycleThroughLibrary = () => {
 
 //Add books
 
-let book1 = new bookConstructor("The Hobbit", "J.R.R. Tolkien", 295, true);
-let book2 = new bookConstructor("The Lord of the Rings", "J.R.R. Tolkien", 1178, true);
 
 let tBody = document.querySelector(".libraryBody");
 let addBookButton = document.querySelector(".addBookButton");
@@ -36,6 +34,10 @@ addBookButton.addEventListener("click", (e) => {
     let author = prompt("Author ?");
     let pages = prompt("How many Pages ?");
 
+    let newBook = new bookConstructor(title, author, pages);
+
+    myBookLibrary.push(newBook);
+
     const newTr = document.createElement("tr");
     const newTdTitle = document.createElement("td");
     const newTdAuthor = document.createElement("td");
@@ -46,16 +48,22 @@ addBookButton.addEventListener("click", (e) => {
 
     const newDeleteButton = document.createElement("button");
 
-    newTdTitle.textContent = title;
-    newTdAuthor.textContent = author;
-    newTdPages.textContent = pages;
-    newTdRead.textContent = "Not read";
+    newTdTitle.textContent = newBook.title;
+    newTdAuthor.textContent = newBook.author;
+    newTdPages.textContent = newBook.pages;
+    newTdRead.textContent = newBook.read;
+    newTdId.textContent = newBook.id;
+
+    
+
 
     tBody.append(newTr);
     newTr.appendChild(newTdTitle);
     newTr.appendChild(newTdAuthor);
     newTr.appendChild(newTdPages);
     newTr.appendChild(newTdRead);
+    newTr.appendChild(newTdId);
+    newTr.appendChild(newTdDelete);
 
 
 
