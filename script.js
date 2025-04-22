@@ -56,6 +56,13 @@ addBookButton.addEventListener("click", (e) => {
 
     newDeleteButton.textContent = "Delete";
 
+    newTdTitle.setAttribute("class", "bookTitle");
+    newTdAuthor.setAttribute("class", "bookAuthor");
+    newTdPages.setAttribute("class", "bookPages");
+    newTdRead.setAttribute("class", "isBookRead");
+    newTdId.setAttribute("class", "bookId");
+    newDeleteButton.setAttribute("class", "deleteBook")
+    newDeleteButton.setAttribute("data-id", newBook.id);
 
     tBody.append(newTr);
     newTr.appendChild(newTdTitle);
