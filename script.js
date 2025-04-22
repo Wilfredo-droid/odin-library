@@ -27,8 +27,6 @@ let tBody = document.querySelector(".libraryBody");
 let addBookButton = document.querySelector(".addBookButton");
 
 addBookButton.addEventListener("click", (e) => {
-
-
     
     let title = prompt("Title ?");
     let author = prompt("Author ?");
@@ -73,6 +71,30 @@ addBookButton.addEventListener("click", (e) => {
     newTr.appendChild(newTdDelete);
     newTdDelete.appendChild(newDeleteButton);
 
+//Delete book
+
+newDeleteButton.addEventListener("click", (e) => {
+
+    e.target.parentElement.parentElement.remove(); 
+
+    //Removes the grandfather tag of the delete button
+
+
+    let newBookLibrary = myBookLibrary.filter((book) => {
+
+        return (book.id != e.target.getAttribute("data-id"));
+
+    })
+
+    myBookLibrary = newBookLibrary;
+
+
+})
+
+
+
+//
+
 
 
 
@@ -82,8 +104,6 @@ addBookButton.addEventListener("click", (e) => {
 //
 
 
-myBookLibrary.push(book1);
-myBookLibrary.push(book2);
 
 cycleThroughLibrary();
 
@@ -97,4 +117,3 @@ cycleThroughLibrary();
 // 
 
 
-//Delete book
